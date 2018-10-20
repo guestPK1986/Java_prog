@@ -1,3 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = "MyFirstProgram"
+
+test { //this is the gradle task to be executed
+  useTestNG() { //Tells Gradle to use TestNG
+       useDefaultListeners = true // Tells TestNG to execute its default reporting structure
+       suites 'src/test/suite.xml' //location of our suite.xml
+  }
