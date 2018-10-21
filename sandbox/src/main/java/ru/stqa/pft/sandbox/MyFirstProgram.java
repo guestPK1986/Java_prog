@@ -1,7 +1,9 @@
 package ru.stqa.pft.sandbox;
 
-public class MyFirstProgram {
+import org.testng.annotations.Test;
 
+public class MyFirstProgram {
+  @Test
 	public static void main (String[] args) {
 		Square s = new Square();
 		s.l = 5;
